@@ -33,7 +33,11 @@ SUB ADDRESSES
 
 
 int main(){
-   printf("end of program");
+   
+    RCC_AHB1 |= (1U<<0);
+    GPIOA_MOD |= (1U<<10);
+    GPIOA_MOD &= ~(1U<<11);
+    GPIOA_ODR |= (1U<<5);
    
   while(1){
       
